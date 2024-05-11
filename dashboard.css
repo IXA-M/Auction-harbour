@@ -1,0 +1,127 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.T h2 {
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    flex: 1;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .section:hover {
+        transform: scale(1.02);
+    }
+
+.auction-item {
+    border: 1px solid #000000;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+}
+
+.search-filter {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+    .search-filter input,
+    .search-filter select {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s ease-in-out;
+        flex: 1;
+    }
+
+        .search-filter input:focus,
+        .search-filter select:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    flex: 1;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+
+@media screen and (max-width: 768px) {
+    .section {
+        flex: 100%;
+    }
+
+    .search-filter input,
+    .search-filter select,
+    button {
+        margin: 10px 0;
+        flex: 100%;
+    }
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }

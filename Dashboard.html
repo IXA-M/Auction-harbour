@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" type="text/css"href="dashboard.css" />
+</head>
+<body>
+    <header>
+        <h1>Auction Harbour</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AuctionM.html">Auction Management</a></li>
+                <li><a href="BidHistory.html">Bid History</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    </div><br>
+    <div class="dashboard">
+        <div class="section">
+            <h2>Watched Auctions</h2>
+            <div class="auction-item">
+                <h3>Auction 1</h3>
+                <p>Bid Status: Watching</p>
+                <p>End Time: 01/04/2024 12:00 PM</p>
+                <p>Notifications: None</p>
+            </div>
+            <div class="auction-item">
+                <h3>Auction 2</h3>
+                <p>Bid Status: Watching</p>
+                <p>End Time: 02/04/2024 12:00 PM</p>
+                <p>Notifications: New bid</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Bidding Auctions</h2>
+            <div class="auction-item">
+                <h3>Auction 3</h3>
+                <p>Bid Status: Bidding</p>
+                <p>End Time: 03/04/2024 12:00 PM</p>
+                <p>Notifications: Outbid</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Won Auctions</h2>
+            <div class="auction-item">
+                <h3>Auction 4</h3>
+                <p>Bid Status: Won</p>
+                <p>End Time: 04/04/2024 12:00 PM</p>
+                <p>Notifications: Winner</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-filter">
+        <input type="text" placeholder="Search by keywords">
+        <select>
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="fashion">Fashion</option>
+            <option value="home">Home & Garden</option>
+        </select>
+        <input type="number" placeholder="Max Price">
+        <select>
+            <option value="">All Conditions</option>
+            <option value="new">New</option>
+            <option value="used">Used</option>
+        </select>
+        <select>
+            <option value="">All Status</option>
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+        </select>
+        <button>Search</button>
+    </div>
+
+</body>
+</html>

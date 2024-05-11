@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Harbour</title>
+    <link rel="stylesheet"type="text/css"href="item.css" />
+</head>
+<body>
+    <header>
+    <h1>Auction Harbour</h1>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="AuctionM.html">Auction Management</a></li>
+            <li><a href="BidHistory.html">Bid History</a></li>
+            <li><a href="Dashboard.html">Dashboard</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="Register.html">Register</a></li>
+        </ul>
+    </nav>
+</header>
+    <br />
+
+    <div id="search">
+        <form>
+            <label for="search"></label>
+            <input type="text" id="search1" name="search" placeholder="Search..">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    
+
+    <div id="productInfo">
+        <div class="productImage">
+            <img src="https://i.ebayimg.com/images/g/aFwAAOSwTlhmBmhS/s-l960.jpg" alt="">
+        </div>
+
+        <div class="productDescription">
+            <h3>Prada Saffiano clutch wallet black with gold chain</h3>
+            <h2>USD $500</h2>
+            <p>Condition: Pre-Owned (Used Like new)</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempora quidem et, ullam aspernatur perspiciatis perferendis porro maiores nulla recusandae voluptatibus iure ipsa delectus odit soluta facilis! Praesentium, ut aliquid.</p>
+
+            <div id="Buttons">
+                <a href="Home.html" class="log" onclick="alerts()">Buy now</a>
+                <a href="Home.html" class="log">Add to cart</a>
+                <a href="Home.html" class="log">Make offer</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function alerts(){
+            alert("item bought")
+        }
+    </script>
+</body>
+</html>

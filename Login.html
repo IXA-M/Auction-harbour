@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="Login.css">
+</head>
+<body>
+    <header>
+        <h1>Auction Harbour</h1>
+    </header>
+    <div class="login">
+        <form id="loginForm">
+            <div class="emailandpass">
+                <label for="Uname"><b>Email</b></label>
+                <input type="email" id="Uname" placeholder="Email" required>
+                <br><br>
+                <label for="Pass"><b>Password</b></label>
+                <input type="password" id="Pass" placeholder="Password" required>
+            </div>
+            <br><br>
+            <button type="button" onclick="login()">Log In Here</button>
+            <br><br>
+            <a href="Register.html">Register</a>
+        </form>
+    </div>
+
+    <script>
+        async function login() {
+            const username = document.getElementById("Uname").value;
+            const password = document.getElementById("Pass").value;
+
+            try {
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Login failed');
+                }
+
+                const data = await response.text();
+                if (data === `${username} is logged in!`) {
+                   
+                    alert(data); 
+                    window.location.href = 'Home.html'; 
+                } else {
+                    
+                    throw new Error('Invalid username or password');
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                alert('Invalid username or password');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Harbour</title>
+    <link rel="stylesheet" type="text/css" href="Home.css" />
+</head>
+<body>
+    <header>
+        <h1>Auction Harbour</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AuctionM.html">Auction Management</a></li>
+                <li><a href="BidHistory.html">Bid History</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" placeholder="Search for items...">
+            <button>Search</button>
+        </div>
+
+        <div class="categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="electronics.html">Electronics</a></li>
+                <li><a href="fashion.html">Fashion</a></li>
+                <li><a href="Home & Garden.html">Home & Garden</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
+        </div>
+        
+
+        <div class="product-listing">
+
+            <div class="product">
+                <img src="https://images.pexels.com/photos/16293663/pexels-photo-16293663/free-photo-of-easter-decor-with-eggs.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image">
+                <h3>Iphone</h3>
+                <p>Description of the product.</p>
+                <p>Price: $100</p>
+                <button onclick="showMessage()">Bid</button>
+                <button style="background-color: #007BFF;" onclick="showMessageBuy()">Buy</button>
+            </div>
+            <div class="product">
+                <img src="https://images.pexels.com/photos/1693627/pexels-photo-1693627.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Product Image">
+                <h3>Lens</h3>
+                <p>Description of the product.</p>
+                <p>Price: $100</p>
+                <button onclick="showMessage()">Bid</button>
+                <button style="background-color: #007BFF;" onclick="showMessageBuy()">Buy</button>
+            </div>
+            <div class="product">
+                <img src="https://i.ebayimg.com/images/g/HJIAAOSwY2hl06Qh/s-l960.jpg" alt="Product Image">
+                <h3>Graphics card</h3>
+                <p>Description of the product.</p>
+                <p>Price: $100</p>
+                <button onclick="showMessage()">Bid</button>
+                <button style="background-color: #007BFF;" onclick="showMessageBuy()">Buy</button>
+            </div>
+            <div class="product">
+                <img src="https://i.ebayimg.com/images/g/fdYAAOSwklVl79Eq/s-l960.png" alt="Product Image">
+                <h3>OLD PHONE</h3>
+                <p>Description of the product.</p>
+                <p>Price: $100</p>
+                <button onclick="showMessage()">Bid</button>
+                <button style="background-color: #007BFF;" onclick="showMessageBuy()">Buy</button>
+            </div>
+            <div class="product">
+                <img src="https://images.pexels.com/photos/196653/pexels-photo-196653.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Product Image">
+                <h3>new phone</h3>
+                <p>Description of the product.</p>
+                <p>Price: $100</p>
+                <button onclick="showMessage()">Bid</button>
+                <button style="background-color: #007BFF;" onclick="showMessageBuy()">Buy</button>
+            </div>
+            <div class="product">
+                <img src="https://images.pexels.com/photos/850360/pexels-photo-850360.jpeg" alt="Product Image">
+                <h3>Product Title</h3>
+                <p>Description of the product.</p>
+                <p>Price: $100</p>
+                <button onclick="window.location.href = 'item.html';">Bid</button>
+                <button style="background-color: #007BFF;" onclick="showMessageBuy()">Buy</button>
+            </div>
+            <div class="product">
+                <img src="https://i.ebayimg.com/images/g/aFwAAOSwTlhmBmhS/s-l960.jpg" alt="Product Image">
+                <h3>Hand Bag</h3>
+                <p>Description of the product.</p>
+                <p>Price: $100</p>
+                <button onclick="showMessage()">Bid</button>
+                <a href="item.html"><button style="background-color: #007BFF;" onclick="gotobuy(action)">Buy</button></a>
+            </div>
+            <script>
+                 function showMessageBuy() {
+                    alert('Item bought');
+                }
+            </script>
+
+            <script>
+                 function showMessage(action) {
+                    alert('You clicked Bid' );
+                }
+                function gotobuy(action) {
+                    
+                     
+    
+                    window.location.href = 'Home.html';
+               
+                }
+            </script>
+        </div>
+
+    </div>
+</body>
+</html>

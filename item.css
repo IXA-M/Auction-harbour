@@ -1,0 +1,239 @@
+﻿body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: #32416b;
+    }
+
+#loginOrRegister {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+    #loginOrRegister:hover {
+        background-color: #32416b;
+    }
+
+    #loginOrRegister img {
+        width: 20px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+#Title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 2.5em;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    #search input[type="text"] {
+        padding: 12px;
+        border: 2px solid black;
+        border-radius: 25px;
+        width: 300px;
+        font-size: 1em;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+        
+
+    #search input[type="submit"] {
+        background-color: black;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+
+        #search input[type="submit"]:hover {
+            background-color: black;
+        }
+
+.category {
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+}
+
+    .category button {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 25px;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+
+        .category button:hover {
+            background-color: #32416b;
+        }
+
+    .category .content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 10px;
+        z-index: 1;
+        width: 200px;
+    }
+
+    .category:hover .content {
+        display: block;
+    }
+
+    .category a {
+        display: block;
+        color: black;
+        padding: 8px 12px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .category a:hover {
+            background-color: #f0f0f0;
+        }
+
+#productInfo {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.productImage {
+    flex: 1 1 300px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+    .productImage img {
+        max-width: 100%;
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+    }
+
+        .productImage img:hover {
+            transform: scale(1.05);
+        }
+
+.productDescription {
+    flex: 1 1 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+    .productDescription h3 {
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .productDescription h2 {
+        color: black;
+        margin-bottom: 20px;
+    }
+
+    .productDescription p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+#Buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.log {
+    width: 140px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1em;
+    
+}
+
+    .log:hover {
+        background-color: black;
+    }
+
+@media only screen and (max-width: 600px) {
+    .productImage,
+    .productDescription {
+        flex: 1 1 100%;
+    }
+
+    #search input[type="text"] {
+        width: 100%;
+    }
+
+    .log {
+        width: 100%;
+    }
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+

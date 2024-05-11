@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+    <h2>Auction Harbour</h2><br>
+    <div class="Register">
+        <form id="Register">
+
+            <div class="Name">
+                <label>
+                    <b>
+                        First Name
+                    </b>
+                </label>
+                <input type="text" name="firstName" id="firstName" placeholder="First Name"><br /><br />
+                <label>
+                    <b>
+                        Last Name
+                    </b>
+                </label>
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name"><br /><br />
+            </div>
+            <div class="emailandpass">
+                <label>
+                    <b>
+                        Email
+                    </b>
+                </label>
+
+
+                <input type="email" id="email" placeholder="Email" required><br /><br />
+                <br><br>
+                <label>
+                    <b>
+                        Password
+                    </b>
+                </label>
+
+
+                <input type="password" id="password" placeholder="Password" required><br /><br />
+            </div><br />
+
+            <br>
+            <div class="phone">
+                <label>
+                    <b>
+                        Phone
+                    </b>
+                </label>
+                <input type="number" name="phone" id="phone" placeholder="Phone Number" />
+            </div>
+            <br>
+            <div class="date">
+                <label>
+                    <b> Date of Birth </b>
+                </label>
+                <input type="date" name="dateOfBirth" id="dateOfBirth" /><br /><br />
+                <label> <b>Gender :</b></label>
+                <label> Male </label>
+                <input type="radio" name="gender" id="male" /><label> Female </label>
+                <input type="radio" name="gender" id="female" />
+            </div><br />
+            <button type="button" onclick="register()">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        async function register() {
+            const username = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            if (username.length != 0 && password.length != 0) {
+                try {
+                    const response = await fetch('http://localhost:3000/register', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ username, password })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Registration failed');
+                    }
+
+                    const data = await response.text();
+                    alert(data); 
+                    window.location.href = 'Login.html'; 
+                } catch (error) {
+                    console.error('Registration error:', error);
+                    alert('Registration failed. Please try again.');
+                }
+            } else {
+                alert("please enter your email and password")
+            }
+        }
+
+
+    </script>
+</body>
+</html>
